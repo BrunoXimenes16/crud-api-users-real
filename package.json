@@ -1,11 +1,12 @@
 {
   "name": "crud-api-users",
   "version": "1.0.0",
-  "description": "",
+  "description": "Uma API simples de CRUD para gerenciar usuários, desenvolvida com Node.js e Express.",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
-  },
+  "start": "node src/app.js",
+  "test": "jest"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,5 +14,29 @@
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "mysql2": "^3.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giovanniamorimprof/crud-api-users.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/giovanniamorimprof/crud-api-users/issues"
+  },
+  "homepage": "https://github.com/giovanniamorimprof/crud-api-users#readme",
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "sonar-scanner": "^3.1.0",
+    "supertest": "^7.1.4"
+  },
+  "jest": {
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/tests"
+    ]
   }
 }

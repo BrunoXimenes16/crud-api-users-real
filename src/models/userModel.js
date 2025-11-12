@@ -67,3 +67,20 @@ const deleteUser = async (id) => {
 };
 
 module.exports = { getAllUsers, getUserById, createUser, updateUser, deleteUser };
+
+module.exports = {
+  getAllUsers: jest.fn(async () => [
+    { id: 1, name: 'Usuário Falso', email: 'teste@mock.com' },
+  ]),
+  createUser: jest.fn(async (user) => ({
+    id: 2,
+    ...user,
+  })),
+  updateUser: jest.fn(async (id, user) => ({
+    id,
+    ...user,
+  })),
+  deleteUser: jest.fn(async (id) => ({
+    success: true,
+  })),
+};
